@@ -138,4 +138,6 @@ def create_query(user_query, filters, sort="_score", sortDir="desc"):
             }
         }
     }
+    if user_query == '*':
+        query_obj['query']['bool']['must'] = [{'match_all': {}}]
     return query_obj
