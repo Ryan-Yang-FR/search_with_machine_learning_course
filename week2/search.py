@@ -131,7 +131,7 @@ def query():
     else:
         query_obj = qu.create_query("*", "", [], sort, sortDir, size=100)
 
-    #print("query obj: {}".format(query_obj))
+    print("query obj: {}".format(query_obj))
     response = opensearch.search(body=query_obj, index="bbuy_products", explain=explain)
     # Postprocess results here if you so desire
 
